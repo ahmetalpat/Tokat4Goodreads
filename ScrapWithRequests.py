@@ -4,9 +4,9 @@ import bs4
 import requests
 from lxml import html
 
-
+isbn=raw_input('ISBN:') # This will be changed with the feature that take the ISBN from barcode scanner.
 root_url = 'http://www.toplukatalog.gov.tr'
-index_url = root_url + '//index.php?_f=1&the_page=&cwid=2&keyword=9789757004677&tokat_search_field=4&order=0&command=Tara#alt'
+index_url = root_url + '//index.php?_f=1&the_page=&cwid=2&keyword=%s&tokat_search_field=4&order=0&command=Tara#alt' %isbn
 
 def get_book_names():
     response = requests.get(index_url)
