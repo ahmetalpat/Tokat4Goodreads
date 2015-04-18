@@ -3,7 +3,6 @@
 import bs4
 import requests
 from lxml import html
-import requests
 
 
 root_url = 'http://www.toplukatalog.gov.tr'
